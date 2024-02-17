@@ -37,18 +37,19 @@
         .raleway {
             font-family: "Raleway", sans-serif;
         }
-        .inter{
+
+        .inter {
             font-family: "Inter", sans-serif;
         }
     </style>
 </head>
 
 <body class="raleway">
-    <header class="container mx-auto max-w-[1440px]">
+    <header class="container mx-auto max-w-[1440px] w-[95%] sm:mt-8 mt-2">
         <div class="max-w-[1170px] mx-auto">
             <!-- nav -->
-            <div class="navbar">
-                <div class="navbar-start">
+            <div class="flex justify-between items-center">
+                <div class="">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -59,24 +60,43 @@
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Destination</a></li>
-                            <li><a>Search</a></li>
+                            <li class="font-medium hover:text-pm-color"><a>Home</a></li>
+                            <li class="font-medium hover:text-pm-color"><a>About</a></li>
+                            <li class="font-medium hover:text-pm-color"><a>Destination</a></li>
+                            <li class="font-medium hover:text-pm-color"><a>Search</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">P-Ticket</a>
+                    <a class="sm:text-4xl text-2xl font-extrabold" href="index.html">P-Ticket</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Destination</a></li>
-                        <li><a>Search</a></li>
+                <div class="hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 gap-14">
+                        <li class="font-medium hover:text-pm-color"><a>Home</a></li>
+                        <li class="font-medium hover:text-pm-color"><a>About</a></li>
+                        <li class="font-medium hover:text-pm-color"><a>Destination</a></li>
+                        <li class="font-medium hover:text-pm-color"><a>Search</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn">Bus <img src="images/bus-icon.png" alt=""></a>
+                <div class="">
+                    <a class="text-pm-color
+                                bg-pm-color
+                                bg-opacity-5
+                                border
+                                border-solid
+                                border-pm-color
+                                border-opacity-40
+                                sm:text-xl
+                                text-base
+                                sm:px-7
+                                py-3
+                                px-4
+                                rounded-xl
+                                flex
+                                items-center
+                                sm:font-bold
+                                font-semibold
+                                hover:bg-transparent
+                                duration-300"><span class="pr-2">Bus</span> <img src="images/bus-icon.png" alt="">
+                    </a>
                 </div>
             </div>
             <!-- end nav -->
