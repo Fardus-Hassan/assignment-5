@@ -56,6 +56,7 @@ for (const seat of seats) {
         if (min !== 0) {
            document.getElementById('btn-coupon').disabled = false;
            document.getElementById('modal').disabled = false;
+
         }
     });
 }
@@ -67,6 +68,9 @@ const coupon2 = 'Couple 20'
     document.getElementById('btn-coupon').addEventListener('click', function couponCalculation() {
         let coupon = document.getElementById('coupon');
         let couponValue = coupon.value;
+        if (couponValue.length === 0) {
+            return;
+        }
         if (couponValue.trim() === coupon1) {
             const discount = document.getElementById('total-price').innerText * 0.15;
             document.getElementById('grand-total').innerText = document.getElementById('total-price').innerText - discount;
