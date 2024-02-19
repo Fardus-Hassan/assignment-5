@@ -1,9 +1,12 @@
+document.getElementById('discount-sec').classList.add('hidden');
+
 const seats = document.querySelectorAll('.seats');
 let count = [];
 const ticketPrice = 550;
+const seatsRemaining = 40;
 
 for (const seat of seats) {
-    seat.addEventListener('click', function () {
+    seat.addEventListener('click', function (e) {
         if (count.length >= 4) {
             alert('You cannot buy more than 4 seats');
             return;
@@ -35,6 +38,37 @@ for (const seat of seats) {
 
         document.getElementById('grand-total').innerText = ticketPrice * count.length;
 
+        document.getElementById('seat-remaining').innerText = seatsRemaining - count.length;
+
     });
 }
 
+const coupon1 = 'NEW15'
+const coupon2 = 'Couple 20'
+document.getElementById('btn-coupon').addEventListener('click', function couponCalculation() {
+    let coupon = document.getElementById('coupon');
+    let couponValue = coupon.value;
+    if (couponValue.trim() === coupon1) {
+        const discount = document.getElementById('total-price').innerText * 0.15;
+        document.getElementById('grand-total').innerText = document.getElementById('total-price').innerText - discount;
+        // console.log(discount);
+        coupon.value = '';
+        document.getElementById('coupon-sec').classList.add('hidden');
+        document.getElementById('discount-sec').classList.remove('hidden');
+        document.getElementById('discount-price').innerText = discount;
+
+    }
+    else if (couponValue.trim() === coupon2) {
+        const discount = document.getElementById('total-price').innerText * 0.20;
+        document.getElementById('grand-total').innerText = document.getElementById('total-price').innerText - discount;
+        // console.log(discount);
+        coupon.value = '';
+        document.getElementById('coupon-sec').classList.add('hidden');
+        document.getElementById('discount-sec').classList.remove('hidden');
+        document.getElementById('discount-price').innerText = discount;
+
+    } else {
+        alert('Please type a valid coupon');
+        coupon.value = '';
+    }
+})
