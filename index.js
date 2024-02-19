@@ -7,16 +7,29 @@ const seatsRemaining = 40;
 
 for (const seat of seats) {
     seat.addEventListener('click', function (e) {
+        
+        if(count.length > 0 ){
+            for(let i = 0 ; i < count.length ; i++) {
+                if (count[i] === seat.childNodes[0].innerText) {
+                    return;
+                }
+            }
+        }
+
         if (count.length >= 4) {
             alert('You cannot buy more than 4 seats');
             return;
         }
+
         seat.style.backgroundColor = '#1DD100';
         seat.style.color = 'white';
         seat.childNodes[0].classList.remove('opacity-50');
-
+        
         const seatName = seat.childNodes[0].innerText;
+        // console.log(seatName);
         count.push(seatName);
+        // console.log(count);
+        
 
         document.getElementById('seat-count').innerText = count.length;
 
@@ -39,7 +52,6 @@ for (const seat of seats) {
         document.getElementById('grand-total').innerText = ticketPrice * count.length;
 
         document.getElementById('seat-remaining').innerText = seatsRemaining - count.length;
-
     });
 }
 
