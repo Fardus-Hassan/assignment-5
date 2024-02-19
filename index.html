@@ -41,10 +41,17 @@
         .inter {
             font-family: "Inter", sans-serif;
         }
+
+        #seats-details li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
 </head>
 
-<body class="raleway text-text-color">
+<body class="raleway *:text-text-color">
     <header class="container mx-auto max-w-[1440px] w-[95%] sm:mt-8 mt-2 lg:mb-0 mb-[80px]">
         <div class="max-w-[1170px] mx-auto">
             <!-- nav -->
@@ -191,7 +198,7 @@
         </section>
         <!-- offer section end -->
         <!-- ticket section -->
-        <section class="bg-[#F7F8F8] border-t-4 border-solid border-pm-color rounded-t-[90px]">
+        <section class="bg-[#F7F8F8] border-t-4 border-solid border-pm-color rounded-t-[90px] sm:pb-[120px] pb-80px">
             <div class="max-w-[1170px] mx-auto sm:pt-[120px] pt-[60px] w-[95%]">
                 <div class=" text-center max-w-[735px] mx-auto">
                     <h1 class="text-[40px] font-bold mb-6">P.H Paribahan</h1>
@@ -200,49 +207,271 @@
                         features allow for a streamlined .</p>
                 </div>
                 <!-- green line -->
-                <div class="flex md:flex-row md:gap-0 gap-10 flex-col-reverse justify-between items-center relative bg-white mt-12 mb-6 p-8 xl:pr-16 pr-10 rounded-3xl">
-                    <div class="lg:w-[75%] md:w-[65%] w-full">
-                        <div class="flex sm:flex-row flex-col text-center mx-auto justify-between items-center gap-7">
-                            <div class="flex justify-between items-center gap-3">
-                                <div>
-                                    <img src="images/bus-logo.png" alt="">
+                <section>
+                    <div
+                        class="flex md:flex-row md:gap-0 gap-10 flex-col-reverse justify-between items-center relative bg-white mt-12 mb-6 p-8 xl:pr-16 pr-10 rounded-3xl">
+                        <div class="lg:w-[75%] md:w-[65%] w-full">
+                            <div
+                                class="flex sm:flex-row flex-col text-center mx-auto justify-between items-center gap-7">
+                                <div class="flex justify-between items-center gap-3">
+                                    <div>
+                                        <img src="images/bus-logo.png" alt="">
+                                    </div>
+                                    <div>
+                                        <h3 class="lg:text-[32px] sm:text-2xl text-xl font-bold">Greenline Paribahan
+                                        </h3>
+                                        <p class="lg:text-lg sm:text-base text-xs inter opacity-60">Coach-009-WEB !
+                                            AC_Business</p>
+                                    </div>
                                 </div>
                                 <div>
-                                    <h3 class="lg:text-[32px] sm:text-2xl text-xl font-bold">Greenline Paribahan</h3>
-                                    <p class="lg:text-lg sm:text-base text-xs inter opacity-60">Coach-009-WEB ! AC_Business</p>
+                                    <button
+                                        class="flex justify-between items-center text-pm-color inter font-medium lg:text-lg sm:text-sm text-xs lg:px-5 sm:px-4 px-2 sm:py-4 py-2 bg-pm-color bg-opacity-[0.15] rounded-xl"><img
+                                            src="images/seat-green.png" alt=""> <span class="px-[5px]">40</span> Seats
+                                        left</button>
                                 </div>
                             </div>
-                            <div>
-                                <button
-                                    class="flex justify-between items-center text-pm-color inter font-medium lg:text-lg sm:text-sm text-xs lg:px-5 sm:px-4 px-2 sm:py-4 py-2 bg-pm-color bg-opacity-[0.15] rounded-xl"><img
-                                        src="images/seat-green.png" alt=""> <span class="px-[5px]">40</span> Seats left</button>
+                            <ul class="bg-[#F7F8F8] rounded-3xl mt-7 p-8">
+                                <li class="flex sm:flex-row flex-col text-center justify-between items-center border-b border-dashed border-text-color border-opacity-20 pb-6 sm:text-lg text-sm
+                                 font-semibold"><span class="opacity-60">Route</span><span
+                                        class="font-semibold">Dhaka-Sylhet</span></li>
+                                <li class="flex sm:flex-row flex-col text-center justify-between items-center py-6 sm:text-lg text-sm
+                                 font-semibold border-b border-dashed border-text-color border-opacity-20"><span
+                                        class="opacity-60">Departure Time</span><span class="font-semibold">9:00
+                                        PM</span>
+                                </li>
+                                <li class="flex md:flex-row flex-col-reverse justify-between items-center gap-3 pt-6">
+                                    <Button
+                                        class="px-2 w-full py-[18px] bg-[#EAEBEC] rounded-xl inter font-medium sm:text-base text-sm border-none">Boarding
+                                        Point - Laxmipur</Button>
+                                    <button
+                                        class="px-2 w-full py-[18px] bg-[#EAEBEC] rounded-xl inter font-medium sm:text-base text-sm border-none">Dropping
+                                        Point - Bogura</button>
+                                    <button
+                                        class="px-2 w-full py-[18px] bg-[#EAEBEC] rounded-xl inter font-medium sm:text-base text-sm border-none">Est.
+                                        Time - 11 Hour</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="images/info-devider.png"
+                            class="absolute top-0 lg:left-[75%] left-[70%] h-[100%] md:block hidden" alt="">
+                        <div class="text-center">
+                            <img src="images/fare.png" class="mx-auto mb-5" alt="">
+                            <h3 class="lg:text-[32px] text-2xl font-bold">550 Taka</h3>
+                            <p class="lg:text-2xl text-sm font-semibold opacity-60">Per Seat</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- seats -->
+                <section class="p-8 bg-white rounded-3xl flex justify-between">
+                    <!-- seats -->
+                    <div class="w-[60%] mr-8">
+                        <h2 class="text-2xl font-semibold mb-6">Select Your Seat</h2>
+                        <div
+                            class="font-bold text-lg inter flex justify-between items-center border-dashed border-t border-b py-3 border-text-color border-opacity-20">
+                            <p class="flex items-center gap-2"><img src="images/seat-gray.png" alt=""><span
+                                    class="opacity-50">Available</span></p>
+                            <p class="flex items-center gap-2"><img src="images/seat-green-filled.png" alt=""><span
+                                    class="text-pm-color">Selected</span></p>
+                        </div>
+                        <div class="inter">
+                            <div class="py-6 flex justify-end">
+                                <button class="py-4 bg-text-color bg-opacity-10 rounded-xl w-[110px]"><img
+                                        src="images/drive.png" class="mx-auto" alt=""></button>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">A</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">A1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">A2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">A3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">A4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">B</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">B1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">B2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">B3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">B4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">C</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">C1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">C2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">C3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">C4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">D</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">D1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">D2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">D3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">D4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">E</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">E1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">E2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">E3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">E4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">F</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">F1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">F2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">F3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">F4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">G</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">G1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">G2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">G3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">G4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">H</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">H1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">H2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">H3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">H4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color mb-6">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">I</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">I1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">I2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">I3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">I4</span></button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-medium text-text-color">
+                                <div class="flex justify-between items-center gap-8">
+                                    <span class="mr-[17px]  opacity-50">J</span>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">J1</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">J2</span></button>
+                                </div>
+                                <div class="flex justify-between items-center gap-8">
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">J3</span></button>
+                                    <button class="py-4 bg-[#F7F8F8] rounded-xl border-none w-[110px]"><span
+                                            class="mx-auto opacity-50">J4</span></button>
+                                </div>
                             </div>
                         </div>
-                        <ul class="bg-[#F7F8F8] rounded-3xl mt-7 p-8">
-                            <li class="flex sm:flex-row flex-col text-center justify-between items-center border-b border-dashed border-text-color border-opacity-20 pb-6 sm:text-lg text-sm
-                             font-semibold"><span class="opacity-60">Route</span><span
-                                    class="font-semibold">Dhaka-Sylhet</span></li>
-                            <li class="flex sm:flex-row flex-col text-center justify-between items-center py-6 sm:text-lg text-sm
-                             font-semibold border-b border-dashed border-text-color border-opacity-20"><span
-                                    class="opacity-60">Departure Time</span><span class="font-semibold">9:00 PM</span>
-                            </li>
-                            <li class="flex md:flex-row flex-col-reverse justify-between items-center gap-3 pt-6">
-                                <Button class="px-2 w-full py-[18px] bg-[#EAEBEC] rounded-xl inter font-medium sm:text-base text-sm border-none">Boarding Point - Laxmipur</Button>
-                                <button class="px-2 w-full py-[18px] bg-[#EAEBEC] rounded-xl inter font-medium sm:text-base text-sm border-none">Dropping Point - Bogura</button>
-                                <button class="px-2 w-full py-[18px] bg-[#EAEBEC] rounded-xl inter font-medium sm:text-base text-sm border-none">Est. Time - 11 Hour</button>
-                            </li>
-                        </ul>
                     </div>
-                    <img src="images/info-devider.png" class="absolute top-0 lg:left-[75%] left-[70%] h-[100%] md:block hidden" alt="">
-                    <div class="text-center">
-                        <img src="images/fare.png" class="mx-auto mb-5" alt="">
-                        <h3 class="lg:text-[32px] text-2xl font-bold">550 Taka</h3>
-                        <p class="lg:text-2xl text-sm font-semibold opacity-60">Per Seat</p>
+                    <!-- price -->
+                    <div class="w-[40%] pl-8 border-l-2 border-dashed border-text-color border-opacity-30 *:inter">
+                        <h2
+                            class="text-2xl font-semibold mb-6 text-left border-b border-dashed border-text-color pb-6 border-opacity-20">
+                            Select Your Seat</h2>
+                        <div class="bg-[#F7F8F8] p-8 rounded-xl">
+                            <div
+                                class="font-semibold pb-4 border-b border-dashed border-text-color border-opacity-20 flex justify-between items-center">
+                                <h3 class="flex items-center gap-2 justify-center relative">Seat <span
+                                        class="px-3 rounded-md bg-pm-color text-white flex justify-center items-center text-xs font-bold absolute top-[10%] right-[-100%]">0</span>
+                                </h3>
+                                <h3 class="translate-x-[-40%]">Class</h3>
+                                <h3>Price</h3>
+                            </div>
+                            <div>
+                                <div id="seats-details" class="list-none opacity-60 font-medium inter *:pt-4 pb-4 border-solid border-b-2 border-text-color border-opacity-20">
+                                    <li><span>C4</span><span>Economy</span><span>550</span></li>
+                                    <li><span>C4</span><span>Economy</span><span>550</span></li>
+                                    <li><span>C4</span><span>Economy</span><span>550</span></li>
+                                    <li><span>C4</span><span>Economy</span><span>550</span></li>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center inter font-semibold py-4">
+                                <h3>Total Price</h3>
+                                <h3>BDT <span>0</span></h3>
+                            </div>
+                            <div class="bg-white justify-between flex items-center rounded-xl p-2 mb-2">
+                                <input type="text" name="" id="coupon" placeholder="Have any coupon?" class="text-sm opacity-80 font-medium text-text-color outline-0 raleway px-4 py-3 rounded-xl">
+                                <button class="inter bg-pm-color rounded-xl px-[18px] py-[10px] font-semibold text-white">Apply</button>
+                            </div>
+                            <div class="flex justify-between items-center inter font-semibold py-4">
+                                <h3>Grand Total</h3>
+                                <h3>BDT <span>0</span></h3>
+                            </div>
+                            <div class="mt-2">
+                                <button class="w-[100%] bg-pm-color text-lg font-extrabold py-3 rounded-2xl text-white">Next</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-            <!--  -->
-            <div class="h-[100px]"></div>
         </section>
     </main>
     <footer>
