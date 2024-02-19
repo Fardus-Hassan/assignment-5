@@ -11,11 +11,12 @@ for (const seat of seats) {
         seat.style.backgroundColor = '#1DD100';
         seat.style.color = 'white';
         seat.childNodes[0].classList.remove('opacity-50');
+
         const seatName = seat.childNodes[0].innerText;
         count.push(seatName);
-        // console.log(count);
+
         document.getElementById('seat-count').innerText = count.length;
-        // console.log(seatCount);
+
         const span = document.createElement('span');
         span.innerText = seatName;
         const span2 = document.createElement('span');
@@ -29,6 +30,9 @@ for (const seat of seats) {
         document.getElementById('seats-details').appendChild(li);
 
         document.getElementById('seats-details').classList.add('list-border');
+
+        document.getElementById('total-price').innerText = ticketPrice * count.length;
+
     });
 }
 
