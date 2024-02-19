@@ -1,6 +1,6 @@
 const seats = document.querySelectorAll('.seats');
 let count=[];
- 
+
  for (const seat of seats) {
     seat.addEventListener('click', function() {
         if (count.length >= 4){
@@ -12,6 +12,9 @@ let count=[];
         seat.childNodes[0].classList.remove('opacity-50');
         const span = seat.childNodes[0].innerText;
         count.push(span);
-        console.log(count);
+        // console.log(count);
+        const seatCount = document.getElementById('seat-count').innerText = count.length;
+        console.log(seatCount);
+
     });
  }
