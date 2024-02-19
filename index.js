@@ -33,6 +33,8 @@ for (const seat of seats) {
 
         document.getElementById('total-price').innerText = ticketPrice * count.length;
 
+        document.getElementById('grand-total').innerText = ticketPrice * count.length;
+
     });
 }
 
